@@ -9,6 +9,7 @@ public class CustomerMappers {
     public CustomerDTO mapCustomerEntityToDTO(CustomerEntity customerEntity){
         CustomerDTO customerDTO = new CustomerDTO();
 
+        customerDTO.setId(customerEntity.getId());
         customerDTO.setAddress(customerEntity.getAddress());
         customerDTO.setAge(customerEntity.getAge());
         customerDTO.setName(customerEntity.getName());
@@ -21,6 +22,7 @@ public class CustomerMappers {
     public CustomerEntity mapCustomerDtoToEntity(CustomerDTO customerDTO){
         CustomerEntity customerEntity = new CustomerEntity();
 
+        customerEntity.setId(customerEntity.getId());
         customerEntity.setAddress(customerDTO.getAddress());
         customerEntity.setAge(customerDTO.getAge());
         customerEntity.setName(customerDTO.getName());
